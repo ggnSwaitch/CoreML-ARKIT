@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var classificationLabel: UILabel!
     @IBOutlet weak var libraryImage: UIBarButtonItem!
-    
     lazy var classificationRequest: VNCoreMLRequest = {
         do {
             /*
@@ -64,7 +63,9 @@ class HomeViewController: UIViewController {
                     // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
                     return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
                 }
-                self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
+                let joined = descriptions.joined(separator: "\n")
+                 self.classificationLabel.text = String(format: "Classification :%@", joined)
+//                self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
             }
         }
     }

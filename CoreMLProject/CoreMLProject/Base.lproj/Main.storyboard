@@ -63,20 +63,11 @@
         <!--Home View Controller-->
         <scene sceneID="pfM-84-yzj">
             <objects>
-                <viewController id="3p3-2k-Q6T" customClass="HomeViewController" customModule="ImagRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3p3-2k-Q6T" customClass="HomeViewController" customModule="CoreMLProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ig-IN-WzG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-df-vfx">
-                                <rect key="frame" x="-10" y="88" width="424" height="586"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-aR-wkH">
-                                <rect key="frame" x="0.0" y="682" width="414" height="123"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UI9-Xn-Afw">
                                 <rect key="frame" x="0.0" y="805" width="414" height="44"/>
                                 <items>
@@ -89,19 +80,50 @@
                                     <barButtonItem systemItem="add" id="0tV-vd-gcE"/>
                                 </items>
                             </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-df-vfx">
+                                <rect key="frame" x="-10" y="88" width="424" height="598"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HV7-dq-A4a">
+                                <rect key="frame" x="45" y="731" width="324" height="60"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ffa-4h-WJm">
+                                    <rect key="frame" x="0.0" y="0.0" width="324" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Add a photo." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FG-qH-P2c">
+                                            <rect key="frame" x="19" y="0.0" width="297" height="60"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8FG-qH-P2c" firstAttribute="top" secondItem="ffa-4h-WJm" secondAttribute="top" id="T1b-21-v8C"/>
+                                        <constraint firstItem="8FG-qH-P2c" firstAttribute="leading" secondItem="ffa-4h-WJm" secondAttribute="leading" constant="19" id="gI1-Un-xda"/>
+                                        <constraint firstAttribute="trailing" secondItem="8FG-qH-P2c" secondAttribute="trailing" constant="8" id="slU-Sq-KIf"/>
+                                        <constraint firstAttribute="bottom" secondItem="8FG-qH-P2c" secondAttribute="bottom" id="wfi-pj-QAd"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6hh-df-vfx" firstAttribute="leading" secondItem="0Ig-IN-WzG" secondAttribute="leadingMargin" constant="-30" id="5hE-B0-gEV"/>
-                            <constraint firstItem="HJJ-JE-Eya" firstAttribute="trailing" secondItem="Rdf-aR-wkH" secondAttribute="trailing" id="8E0-kt-rWw"/>
-                            <constraint firstItem="UI9-Xn-Afw" firstAttribute="leading" secondItem="HJJ-JE-Eya" secondAttribute="leading" id="8Pn-zm-B6S"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="UI9-Xn-Afw" secondAttribute="bottom" constant="-36" id="4hs-G9-9Ws"/>
+                            <constraint firstItem="6hh-df-vfx" firstAttribute="leading" secondItem="0Ig-IN-WzG" secondAttribute="leadingMargin" constant="-30" id="5hE-B0-gEV" userLabel="Image View.leading = leading"/>
+                            <constraint firstItem="HV7-dq-A4a" firstAttribute="leading" secondItem="HJJ-JE-Eya" secondAttribute="leading" constant="45" id="BT8-g2-6fb"/>
                             <constraint firstItem="6hh-df-vfx" firstAttribute="trailing" secondItem="UI9-Xn-Afw" secondAttribute="trailing" id="Rub-FT-s4b"/>
                             <constraint firstItem="UI9-Xn-Afw" firstAttribute="trailing" secondItem="HJJ-JE-Eya" secondAttribute="trailing" id="ZdN-Ps-8j2"/>
-                            <constraint firstItem="6hh-df-vfx" firstAttribute="top" secondItem="HJJ-JE-Eya" secondAttribute="top" id="jhH-ZC-DpC"/>
-                            <constraint firstItem="UI9-Xn-Afw" firstAttribute="top" secondItem="6hh-df-vfx" secondAttribute="bottom" constant="131" id="pv4-ab-aMX"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="UI9-Xn-Afw" secondAttribute="bottom" constant="-36" id="wUg-yj-DqH"/>
-                            <constraint firstItem="Rdf-aR-wkH" firstAttribute="leading" secondItem="HJJ-JE-Eya" secondAttribute="leading" id="ylm-wc-qUJ"/>
-                            <constraint firstItem="Rdf-aR-wkH" firstAttribute="top" secondItem="HJJ-JE-Eya" secondAttribute="top" constant="594" id="zcr-Hb-Ojw"/>
+                            <constraint firstItem="HJJ-JE-Eya" firstAttribute="trailing" secondItem="HV7-dq-A4a" secondAttribute="trailing" constant="45" id="hm6-FF-dZQ"/>
+                            <constraint firstItem="UI9-Xn-Afw" firstAttribute="top" secondItem="HV7-dq-A4a" secondAttribute="bottom" constant="14" id="iTG-it-Fj4"/>
+                            <constraint firstItem="6hh-df-vfx" firstAttribute="top" secondItem="HJJ-JE-Eya" secondAttribute="top" id="jhH-ZC-DpC" userLabel="Image View.top = top"/>
+                            <constraint firstItem="UI9-Xn-Afw" firstAttribute="leading" secondItem="0Ig-IN-WzG" secondAttribute="leading" id="nds-3v-GD1"/>
+                            <constraint firstItem="UI9-Xn-Afw" firstAttribute="top" secondItem="6hh-df-vfx" secondAttribute="bottom" constant="119" id="pv4-ab-aMX" userLabel="Toolbar.top = Image View.bottom + 16"/>
+                            <constraint firstItem="HV7-dq-A4a" firstAttribute="top" secondItem="6hh-df-vfx" secondAttribute="bottom" constant="45" id="qZg-I4-uqA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HJJ-JE-Eya"/>
                     </view>
@@ -110,7 +132,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cameraButton" destination="Qon-20-Tat" id="oho-PR-p8I"/>
-                        <outlet property="classificationLabel" destination="Rdf-aR-wkH" id="ASx-VW-uze"/>
+                        <outlet property="classificationLabel" destination="8FG-qH-P2c" id="KYR-kx-hb6"/>
                         <outlet property="imageView" destination="6hh-df-vfx" id="SKh-Sr-OEb"/>
                     </connections>
                 </viewController>

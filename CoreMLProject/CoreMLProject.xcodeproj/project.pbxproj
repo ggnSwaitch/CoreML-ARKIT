@@ -15,13 +15,13 @@
 		0260D967229FA7FB006C7485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0260D965229FA7FB006C7485 /* LaunchScreen.storyboard */; };
 		0260D972229FA7FB006C7485 /* CoreMLProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260D971229FA7FB006C7485 /* CoreMLProjectTests.swift */; };
 		0260D97D229FA7FB006C7485 /* CoreMLProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260D97C229FA7FB006C7485 /* CoreMLProjectUITests.swift */; };
-		0260D98B229FA8FB006C7485 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0260D98A229FA8FA006C7485 /* Inceptionv3.mlmodel */; };
 		0260D997229FAFCF006C7485 /* MLRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260D993229FAFCE006C7485 /* MLRecognizer.swift */; };
 		0260D998229FAFCF006C7485 /* UIImage+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260D994229FAFCF006C7485 /* UIImage+Utilities.swift */; };
 		0260D999229FAFCF006C7485 /* CoreImage+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260D995229FAFCF006C7485 /* CoreImage+Utility.swift */; };
 		0260D99A229FAFCF006C7485 /* ARKit+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260D996229FAFCF006C7485 /* ARKit+Utilities.swift */; };
 		02A6651A22AE6D3700F1E351 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A6651922AE6D3700F1E351 /* HomeViewController.swift */; };
 		02A6651C22AE7CF600F1E351 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A6651B22AE7CF600F1E351 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		02A6652022AF74F700F1E351 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 02A6651F22AF74F700F1E351 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +56,13 @@
 		0260D978229FA7FB006C7485 /* CoreMLProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreMLProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0260D97C229FA7FB006C7485 /* CoreMLProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLProjectUITests.swift; sourceTree = "<group>"; };
 		0260D97E229FA7FB006C7485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0260D98A229FA8FA006C7485 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		0260D993229FAFCE006C7485 /* MLRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLRecognizer.swift; sourceTree = "<group>"; };
 		0260D994229FAFCF006C7485 /* UIImage+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utilities.swift"; sourceTree = "<group>"; };
 		0260D995229FAFCF006C7485 /* CoreImage+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreImage+Utility.swift"; sourceTree = "<group>"; };
 		0260D996229FAFCF006C7485 /* ARKit+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARKit+Utilities.swift"; sourceTree = "<group>"; };
 		02A6651922AE6D3700F1E351 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02A6651B22AE7CF600F1E351 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		02A6651F22AF74F700F1E351 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				0260D992229FAFC0006C7485 /* Library */,
-				0260D98A229FA8FA006C7485 /* Inceptionv3.mlmodel */,
 				0260D959229FA7FA006C7485 /* CoreMLProject */,
 				0260D970229FA7FB006C7485 /* CoreMLProjectTests */,
 				0260D97B229FA7FB006C7485 /* CoreMLProjectUITests */,
@@ -153,6 +152,7 @@
 				0260D995229FAFCF006C7485 /* CoreImage+Utility.swift */,
 				0260D993229FAFCE006C7485 /* MLRecognizer.swift */,
 				0260D994229FAFCF006C7485 /* UIImage+Utilities.swift */,
+				02A6651F22AF74F700F1E351 /* Inceptionv3.mlmodel */,
 			);
 			name = Library;
 			path = "New Group";
@@ -292,9 +292,9 @@
 			files = (
 				0260D99A229FAFCF006C7485 /* ARKit+Utilities.swift in Sources */,
 				0260D95F229FA7FA006C7485 /* ViewController.swift in Sources */,
-				0260D98B229FA8FB006C7485 /* Inceptionv3.mlmodel in Sources */,
 				02A6651A22AE6D3700F1E351 /* HomeViewController.swift in Sources */,
 				02A6651C22AE7CF600F1E351 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				02A6652022AF74F700F1E351 /* Inceptionv3.mlmodel in Sources */,
 				0260D997229FAFCF006C7485 /* MLRecognizer.swift in Sources */,
 				0260D999229FAFCF006C7485 /* CoreImage+Utility.swift in Sources */,
 				0260D998229FAFCF006C7485 /* UIImage+Utilities.swift in Sources */,
